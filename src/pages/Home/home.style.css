@@ -1,0 +1,341 @@
+/* Global Styles */
+.home-wrapper {
+    width: 100%;
+    overflow-x: hidden;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    color: #2d3436;
+    line-height: 1.6;
+    width: 100%;
+    padding-top: 80px; /* Dodajte ovo - visina vašeg navigation bara */
+
+}
+
+/* Section One - Hero Section */
+.home-secOne {
+    margin: 60px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 80px;
+    padding: 0 5%;
+}
+
+.home-secOne-pic {
+    width: 500px;
+    border-radius: 20px;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.home-secOne-pic:hover {
+    transform: scale(1.02);
+}
+
+.home-secOne-contant h3 {
+    font-size: 42px;
+    max-width: 600px;
+    font-weight: 700;
+    margin-bottom: 24px;
+    line-height: 1.2;
+    background: linear-gradient(90deg, #2d3436, #0984e3);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.home-secOne-contant p {
+    font-size: 18px;
+    max-width: 550px;
+    color: #636e72;
+    margin-bottom: 32px;
+}
+
+/* Section Two - Features */
+.home-secTwo {
+    margin: 80px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 80px;
+    padding: 0 5%;
+    background-color: #f9f9f9;
+    padding: 60px 5%;
+    border-radius: 30px;
+    margin: 80px 5%;
+}
+
+.home-secTwo-contant h3 {
+    font-size: 36px;
+    margin-bottom: 24px;
+    color: #2d3436;
+}
+
+.home-secTwo-contant p {
+    font-size: 18px;
+    max-width: 600px;
+    text-align: justify;
+    color: #636e72;
+    margin-bottom: 24px;
+}
+
+.home-secTwo-pic {
+    width: 500px;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.1);
+}
+
+/* Section Three - Works */
+.home-secThree {
+    margin: 100px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 5%;
+}
+
+.home-secThree-title {
+    display: flex;
+    gap: 100px;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 60px;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.home-secThree-title h2 {
+    font-size: 36px;
+    color: #2d3436;
+    width: 40%;
+    min-width: 300px;
+}
+
+.home-secThree-title p {
+    width: 50%;
+    text-align: justify;
+    font-size: 18px;
+    max-width: 600px;
+    color: #636e72;
+}
+
+.home-secThree-works {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 1400px;
+}
+
+.ourworkitem {
+    border: 1px solid #dfe6e9;
+    border-radius: 20px;
+    width: 350px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px;
+    transition: all 0.3s ease;
+    background: white;
+    box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.05);
+}
+
+.ourworkitem:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.1);
+    border-color: #74b9ff;
+}
+
+.ourworkitem img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 15px;
+    margin-bottom: 20px;
+}
+
+.ourworkitem h4 {
+    font-size: 22px;
+    text-align: center;
+    margin-bottom: 15px;
+    color: #2d3436;
+}
+
+.ourworkitem p {
+    text-align: center;
+    color: #636e72;
+    font-size: 16px;
+}
+
+/* Section Four - Testimonials */
+.home-secFour {
+    margin: 100px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 5%;
+}
+
+.home-secFour h2 {
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 60px;
+    color: #2d3436;
+}
+
+.home-secFour-clients-feedback {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    flex-wrap: wrap;
+    max-width: 1400px;
+}
+
+.our-client-item {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    width: 350px;
+    border: none;
+    border-radius: 20px;
+    background-color: white;
+    padding: 30px;
+    box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+}
+
+.our-client-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.1);
+}
+
+.client-info {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.our-client-item img {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 20px;
+}
+
+.client-details h4 {
+    margin: 0;
+    font-size: 18px;
+    font-weight: 700;
+    color: #2d3436;
+}
+
+.client-details p {
+    margin: 5px 0 0;
+    font-size: 14px;
+    color: #636e72;
+}
+
+.client-comment {
+    text-align: left;
+    font-size: 16px;
+    color: #2d3436;
+    line-height: 1.7;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .home-secOne, .home-secTwo {
+        gap: 50px;
+    }
+    
+    .home-secOne-pic, .home-secTwo-pic {
+        width: 450px;
+    }
+}
+
+@media (max-width: 992px) {
+    .home-secOne, .home-secTwo {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .home-secOne-contant, .home-secTwo-contant {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .home-secThree-title {
+        flex-direction: column;
+        gap: 30px;
+        text-align: center;
+    }
+    
+    .home-secThree-title h2, 
+    .home-secThree-title p {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .home-secOne-pic, .home-secTwo-pic {
+        width: 100%;
+        max-width: 400px;
+    }
+    
+    .home-secOne-contant h3 {
+        font-size: 32px;
+    }
+    
+    .home-secTwo {
+        margin: 60px 3%;
+        padding: 40px 5%;
+    }
+    
+    .ourworkitem, .our-client-item {
+        width: 100%;
+        max-width: 400px;
+    }
+}
+
+@media (max-width: 576px) {
+    .home-secOne, .home-secTwo, .home-secThree, .home-secFour {
+        padding: 0 20px;
+    }
+    
+    .home-secOne-contant h3 {
+        font-size: 28px;
+    }
+    
+    .home-secOne-contant p,
+    .home-secTwo-contant p {
+        font-size: 16px;
+    }
+    
+    .home-secThree-title h2 {
+        font-size: 28px;
+    }
+    
+    .home-secFour h2 {
+        font-size: 28px;
+    }
+    
+    .our-client-item {
+        padding: 20px;
+    }
+}
+
+/* Animation */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.home-secOne, .home-secTwo, .home-secThree, .home-secFour {
+    animation: fadeIn 0.8s ease-out forwards;
+}
+
+.home-secTwo { animation-delay: 0.1s; }
+.home-secThree { animation-delay: 0.2s; }
+.home-secFour { animation-delay: 0.3s; }

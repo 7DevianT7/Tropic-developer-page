@@ -1,0 +1,9 @@
+.header-text {
+    max-width: 600px;
+    font-size: 78px;
+    line-height: 1;
+    background-image: url("../../assets/brush1.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
