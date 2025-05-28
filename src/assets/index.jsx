@@ -7,7 +7,7 @@ import work3 from './S10E8-Thumbnail.webp'
 import client1 from './client1.jpg'
 import client2 from './client2.jpg'
 import client3 from './client3.jpg'
-import notfound from './404.svg'
+import notfound from './tumblr_l82imby06j1qdw2puo1_1280.jpg'
 
 const MyTechLogo = ({ extClass }) => {
     return <img className={extClass} src={mytechlogo} />
