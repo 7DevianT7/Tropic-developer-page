@@ -9,26 +9,42 @@ import NotFound from './pages/NotFound/NotFound';
 import Users from './pages/Users/Users';
 import CartPage from './pages/Cart/Cart';
 
-// Proizvodi
+// definisao promo kodove
+const discountCodes = [
+  { code: "SAVE10", percent: 10 },
+  { code: "HELLO20", percent: 20 },
+  { code: "REACT30", percent: 30 }
+];
+
+// proizvodi
 const products = [
   {
     id: 1,
-    image: '👕', // Možeš zameniti sa tvojom komponentom
+    image: '👕',  
     name: "Item 1",
-    price: 220,
+    price: 220.00, 
     description: "Brand new shirt",
   },
   {
     id: 2,
     image: '🖥️',
     name: "Laptop",
-    price: 999,
+    price: 999.00,
+    description: "Powerful gaming laptop",
+  },
+  {
+    id: 3,
+    image: '🖥️',
+    name: "Laptop",
+    price: 666.00,
     description: "Powerful gaming laptop",
   },
 ];
 
 function App() {
   const [cartItems, setCartItems] = useState([]);
+  const [discount, setDiscount] = useState(0);
+  const [discountMessage, setDiscountMessage] = useState("");
 
   const addToCart = (product) => {
     setCartItems(prevItems => {
@@ -59,6 +75,17 @@ function App() {
     );
   };
 
+  const applyDiscount = (code) => {
+    const foundCode = discountCodes.find(dc => dc.code === code);
+    if (foundCode) {
+      setDiscount(foundCode.percent);
+      setDiscountMessage(`Uspešno primenjen kod: ${code} (-${foundCode.percent}%)`);
+    } else {
+      setDiscount(0);
+      setDiscountMessage("Nevažeći promo kod");
+    }
+  };
+
   return (
     <Router>
       <Navigation cartItemsCount={cartItems.reduce((sum, item) => sum + item.quantity, 0)} />
@@ -76,6 +103,9 @@ function App() {
               items={cartItems}
               onRemove={removeFromCart}
               onUpdateQuantity={updateQuantity}
+              onApplyDiscount={applyDiscount}
+              discount={discount}
+              discountMessage={discountMessage}
             />
           }
         />

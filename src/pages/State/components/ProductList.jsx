@@ -10,7 +10,7 @@ const ProductList = ({ products, onAddToCart }) => {
           key={product.id}
           image={product.image}
           itemName={product.name}
-          price={product.price}
+          price={Number(product.price)} 
           desc={product.description}
           actionButton={
             <GlobalButton
