@@ -146,3 +146,33 @@
         transform: translateX(0);
     }
 }
+
+/* Dodaj ove stilove na kraj fajla */
+
+.cart-link {
+  position: relative;
+}
+
+.cart-badge {
+  position: absolute;
+  top: -8px;
+  right: -12px;
+  background-color: #ff4757;
+  color: white;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+/* Za mobilni meni */
+@media (max-width: 768px) {
+  .cart-badge {
+    top: 0;
+    right: 0;
+  }
+}

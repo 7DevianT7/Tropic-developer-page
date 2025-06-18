@@ -8,6 +8,7 @@ import client1 from './client1.jpg'
 import client2 from './client2.jpg'
 import client3 from './client3.jpg'
 import notfound from './tumblr_l82imby06j1qdw2puo1_1280.jpg'
+import laptop1 from './laptop1.png'
 
 const MyTechLogo = ({ extClass }) => {
     return <img className={extClass} src={mytechlogo} />
@@ -49,6 +50,10 @@ const PicNotFound = ({ extClass }) => {
     return <img className={extClass} src={notfound} />
 }
 
+const PicLaptop = ({ extClass }) => {
+    return <img className={extClass} src={laptop1} />
+}
+
 
 export {
     MyTechLogo,
@@ -60,5 +65,6 @@ export {
     PicClientOne,
     PicClientTwo,
     PicClientThree,
-    PicNotFound
+    PicNotFound,
+    PicLaptop
 }

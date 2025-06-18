@@ -1,0 +1,73 @@
+/* users.style.css */
+.users-wrapper {
+    width: 100%;
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.input-forms {
+    padding: 15%;
+    /*border: 2px solid #bdc3c7;*/
+    border-radius: 15px;
+    /*background: #f9f9f9;*/
+}
+
+.users-title {
+    font-size: 24px;
+    margin-top: 0;
+    text-align: center;
+    color: #2c3e50;
+}
+
+.input-form-item {
+    margin-bottom: 15px;
+}
+
+.input-form-item label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.input-form-item input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.add-user-button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+}
+
+.users-list {
+    margin-top: 20px;
+    padding: 20px;
+    background: #f9f9f9;
+    border-radius: 15px;
+    border: 2px solid #bdc3c7;
+}
+
+.user-item {
+    background: #ecf0f1;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    border-left: 4px solid #3498db;
+}
+
+.user-item p {
+    margin: 5px 0;
+}
+
+.no-users {
+    text-align: center;
+    color: #7f8c8d;
+    font-style: italic;
+}
