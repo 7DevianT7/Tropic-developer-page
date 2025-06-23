@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import GlobalButton from "../../components/globalbutton/GlobalButton";
 import MustBuyGif from "../../assets/mustbuy.gif";
 import "./Cart.style.css";
@@ -11,6 +12,7 @@ const CartPage = ({
   discount = 0,
   discountMessage = ""
 }) => {
+  const navigate = useNavigate();
   const [promoCode, setPromoCode] = useState("");
   
   const subtotal = items.reduce((sum, item) => sum + item.price * item.quantity, 0);
@@ -20,6 +22,18 @@ const CartPage = ({
   const handleApplyDiscount = () => {
     onApplyDiscount(promoCode);
     setPromoCode("");
+  };
+
+  const handleCheckout = () => {
+    navigate('/checkout', { 
+      state: { 
+        cartItems: items,
+        appliedDiscount: discount,
+        subTotal: subtotal,
+        discountAmount: discountAmount,
+        totalPrice: total
+      }
+    });
   };
 
   return (
@@ -98,6 +112,14 @@ const CartPage = ({
               <span>Total:</span>
               <span>${total.toFixed(2)}</span>
             </div>
+          </div>
+
+          <div className="checkout-button">
+            <GlobalButton
+              displayText="Checkout"
+              onClick={handleCheckout}
+              disabled={items.length === 0}
+            />
           </div>
         </>
       ) : (

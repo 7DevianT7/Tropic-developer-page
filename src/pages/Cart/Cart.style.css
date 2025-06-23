@@ -124,3 +124,25 @@
   padding-top: 10px;
   border-top: 1px solid #ddd;
 }
+
+
+.checkout-button {
+  margin-top: 20px;
+  text-align: right;
+}
+
+.checkout-button button {
+  padding: 12px 24px;
+  background-color: #28a745;
+  color: white;
+  font-weight: bold;
+}
+
+.checkout-button button:hover {
+  background-color: #218838;
+}
+
+.checkout-button button:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+}

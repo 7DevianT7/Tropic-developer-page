@@ -8,8 +8,9 @@ import Learning from './pages/Learning/Learning';
 import NotFound from './pages/NotFound/NotFound';
 import Users from './pages/Users/Users';
 import CartPage from './pages/Cart/Cart';
+import CheckoutPage from './pages/Checkout/CheckoutPage'; // <--- NOVO
 
-// definisao promo kodove
+// definisani promo kodovi
 const discountCodes = [
   { code: "SAVE10", percent: 10 },
   { code: "HELLO20", percent: 20 },
@@ -109,6 +110,7 @@ function App() {
             />
           }
         />
+        <Route path="/checkout" element={<CheckoutPage />} /> {/* NOVA RUTA */}
         <Route path="/users" element={<Users />} />
         <Route path="/learning" element={<Learning />} />
         <Route path="*" element={<NotFound />} />
